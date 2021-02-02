@@ -1,8 +1,8 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
+    <link rel="icon" type="image/png" href="images/videoimg2.png"/>
 	<title>Grocery Shoppy </title>
 </head>
 

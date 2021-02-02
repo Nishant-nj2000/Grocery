@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +33,7 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="#about_us">
+                            <li><a href="index.php#about_us">
                                     <span class="fa fa-info-circle" aria-hidden="true"></span> About Us
                                 </a>
                             </li>

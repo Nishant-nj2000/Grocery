@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,19 +16,33 @@
 	<title>Products Page</title>
 </head>
 <body>
+
+	<!-- header-bot-->
+	<?php include "header.php" ?>
+	<!-- //header-bot -->
+
+	<div class="main-banner" id="top">
+        <img src="images/banner4.jpg"/>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>No.1 Leading E-commerce marketplace</h6>
+                <h2><em>Top Products</em></h2>
+            </div>
+        </div>
+    </div>
+
+	<!-- Navigation-->
+	<?php include "navigation.php" ?>
+	<!-- //Navigation -->
+
+
+
 	<section id="shopnow" class="shopnow">
+
 	<!-- top Products -->
 	<div class="ads-grid">
 		<div class="container">
-			<!-- tittle heading -->
-			<h3 class="tittle-w3l">Our Top Products
-				<span class="heading-style">
-					<i></i>
-					<i></i>
-					<i></i>
-				</span>
-			</h3>
-			<!-- //tittle heading -->
 			
 			<!--sidebar-->
 			<?php include "sidebar.php" ?>
@@ -730,6 +743,16 @@
 	<!-- //special offers -->
 
 </section>
+
+  
+
+	<!--Footer-->
+	<?php include "footer.php" ?>
+	<!--Footer End-->
+
+	<!-- all the scripts-->
+	<?php include "scripts.php" ?>
+	<!-- //all the scripts-->
 
 </body>
 </html>
