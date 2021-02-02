@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +44,7 @@
                             
                             
                             <?php 
-                                if(empty($_SESSION['Email']))
+                                if(empty($_SESSION['email']))
                                 {
                                       echo'<li><a href="signin.php">
                                                 <span class="fa fa-phone-square" aria-hidden="true"> Sign In</span>
@@ -55,19 +54,19 @@
 
                                 else
                                 {
-                                    if($_SESSION['Role'] == 'Customer')
+                                    if($_SESSION['role'] == 'Customer')
                                     {
                                         echo'<li><form action="#" method="post" class="last">
                                                 <input type="hidden" name="cmd" value="_cart">
                                                 <input type="hidden" name="display" value="1">
-                                                <button type="submit" class="btn btn-warning btn-sm" style="margin-top:10px; border-radius:100px;"> <i class="fa fa-shopping-cart fa-lg" style="font-size: 1.5em;"></i> </button>
+                                                <button type="submit" class="btn btn-warning btn-sm" style="border-radius:8px;"> <i class="fa fa-shopping-cart fa-lg" style="font-size: 1.5em;"></i> </button>
                                                 </form>
                                             </li>';
                                     }
                                 }
 
 
-                                if(empty($_SESSION['Email']))
+                                if(empty($_SESSION['email']))
                                 {   
                                         echo '<li>
                                                 <a href="signup.php">
@@ -80,11 +79,11 @@
                                 {
                                     echo'<li class="dropdown">';
 
-                                            if($_SESSION['Role'] == "Owner")
+                                            if($_SESSION['role'] == "Owner")
                                             {
                                                 echo'<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                                     <span class="fa fa-user" aria-hidden="true"> '; 
-                                                    echo $_SESSION['Name'];  echo " (Owner)"; 
+                                                    echo $_SESSION['name'];  echo " (Owner)"; 
                                                     
                                                     echo'
                                                     </span>
@@ -103,7 +102,7 @@
                                             {
                                                 echo'<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                                     <span class="fa fa-user" aria-hidden="true"> '; 
-                                                    echo $_SESSION['Name'];
+                                                    echo $_SESSION['name'];
                                                     echo'</a>
 
                                                 <div class="dropdown-menu">

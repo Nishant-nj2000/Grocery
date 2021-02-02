@@ -19,7 +19,7 @@
 
 
 			//for checking if the user already exists.
-			$check_email = mysqli_query($conn,"SELECT * FROM user_details WHERE Email = '$Email'");
+			$check_email = mysqli_query($conn,"SELECT * FROM user_details WHERE email = '$Email'");
 
 			if(mysqli_num_rows($check_email) != 0)
 			{
@@ -29,7 +29,7 @@
 			//comparing both passwords 
 			elseif($Password == $C_Password)
 			{
-				$query = "INSERT INTO user_details (Name, Email, Password) VALUES ('$Name', '$Email', '$Password')";
+				$query = "INSERT INTO user_details (name, email, password) VALUES ('$Name', '$Email', '$Password')";
 
 				if(mysqli_query($conn,$query))
 				{
