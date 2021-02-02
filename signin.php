@@ -10,16 +10,16 @@
 
 		try
 		{
-		$result = mysqli_query($conn,"SELECT * FROM user_details WHERE Email = '$Email' AND Password = '$Password'");
+		$result = mysqli_query($conn,"SELECT * FROM user_details WHERE email = '$Email' AND password = '$Password'");
 			$rows = mysqli_fetch_array($result);
 			
 			if(is_array($rows))
 			{
-				$_SESSION['User_id'] = $rows['User_id'];
-				$_SESSION['Email'] = $rows['Email'];
-				$_SESSION['Name'] = $rows['Name'];
-				$_SESSION['Password'] = $rows['Password'];
-				$_SESSION['Role'] = $rows['Role'];	
+				$_SESSION['user_id'] = $rows['user_id'];
+				$_SESSION['email'] = $rows['email'];
+				$_SESSION['name'] = $rows['name'];
+				$_SESSION['password'] = $rows['password'];
+				$_SESSION['role'] = $rows['role'];	
 				header("Location: index.php");
 				exit();
 			}
