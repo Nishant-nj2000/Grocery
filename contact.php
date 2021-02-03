@@ -5,14 +5,12 @@
 	{
 		$errMsg = '';
 		$user_id= $_SESSION['user_id'];
-		$name= $_SESSION['name'];
-		$email= $_SESSION['email'];
 		$feed_subject = $_POST['feed_subject'];
 		$feed_msg = $_POST['feed_msg'];
 
 		try
 		{
-			$query = "INSERT INTO feedback (user_id, name, email, feed_subject, feed_msg) VALUES ('$user_id', '$name', '$email', '$feed_subject', '$feed_msg')";
+			$query = "INSERT INTO feedback (user_id, feed_subject, feed_msg) VALUES ('$user_id', '$feed_subject', '$feed_msg')";
 			if(mysqli_query($conn,$query))
 			{
 				$errMsg ='<span class="fa fa-thumbs-up" aria-hidden="true"></span>
@@ -54,14 +52,25 @@
                 	<div class="contact-form wthree">
                 		<div class="form-group">
 						<form action="#" method="post">
+							<?php
+							if(isset($errMsg)){
+								echo '<div class="alert alert-success" role="alert" style="margin-top:60px;">
+								'.$errMsg.'</div>';
+							}
+							?>
 							<div class="">
 								<input type="text"  name="name" placeholder="Login First !" value="<?PHP if(isset($_SESSION['email'])){echo $_SESSION['name'];}?>" style="border-radius: 5px" readonly>
 							</div>
 							<div class="">
-								<input class="text" type="text" name="feed_subject" placeholder="Subject" required style="border-radius: 5px">
+								<input class="email" type="email" name="email" placeholder="Login First !" value="<?PHP if(isset($_SESSION['email'])){echo $_SESSION['email'];}?>" style="border-radius: 5px" readonly>
 							</div>
 							<div class="">
-								<input class="email" type="email" name="email" placeholder="Login First !" value="<?PHP if(isset($_SESSION['email'])){echo $_SESSION['email'];}?>" style="border-radius: 5px" readonly>
+								<select name="feed_subject" required style="border-radius: 5px">
+									<option value=""><--Select Subject--></option>
+									<option value="Positive Feedback">Positive Feedback</option>
+									<option value="Suggestion">Suggestion</option>
+									<option value="Query or Complaint">Query or Complaint</option>
+								</select>
 							</div>
 							<div class="">
 								<textarea placeholder="Message" name="feed_msg" required style="border-radius: 5px"></textarea>
@@ -69,13 +78,6 @@
 							<div class="main-button">
 				                <button type="submit" class="btn btn-primary" name="submit" id="submit"> Submit </button>
 				            </div>
-
-				            <?php
-							if(isset($errMsg)){
-								echo '<div class="alert alert-success" role="alert" style="margin-top:60px;">
-								'.$errMsg.'</div>';
-							}
-							?>
 						</form>
 						</div>
 					</div>

@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,7 +115,7 @@
                                                     <a class="dropdown-item" href="#"><i class="fa fa-user-circle"></i> My Profile</a>
                                                     <a class="dropdown-item" href="#"><i class="fa fa-calendar-check-o"></i> My Orders</a>
                                                     <a class="dropdown-item" href="#"><i class="fa fa-heart"></i> Wishlist</a>
-                                                    <a class="dropdown-item" href="#"><i class="fa fa-commenting"></i> Give Feedback</a>
+                                                    <a class="dropdown-item" href="contact.php"><i class="fa fa-commenting"></i> Give Feedback</a>
                                                     <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out"></i> Sign Out</a>
                                                 </div>';
                                             }
