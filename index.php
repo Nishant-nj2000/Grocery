@@ -1,3 +1,8 @@
+<?php     
+    include 'config.php';
+    $result = mysqli_query($conn,"SELECT user_details.name,feedback.feed_msg FROM feedback INNER JOIN user_details ON feedback.user_id = user_details.user_id WHERE feedback.feed_subject = 'Positive Feedback'");
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -162,50 +167,24 @@
                         <img src="assets/images/line-dec.png" alt="waves">
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="First One">
-                            </div>
-                            <div class="right-content">
-                                <h4>John Doe</h4>
-                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em></p>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="second one">
-                            </div>
-                            <div class="right-content">
-                                <h4>John Doe</h4>
-                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="fourth muscle">
-                            </div>
-                            <div class="right-content">
-                                <h4>John Doe</h4>
-                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em></p>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="training fifth">
-                            </div>
-                            <div class="right-content">
-                                <h4>John Doe</h4>
-                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+
+                <?php while($row = mysqli_fetch_array($result)) {?>
+                    <div class="col-lg-6">
+                        <ul class="features-items">
+                            <li class="feature-item">
+                                <div class="left-icon">
+                                    <img src="assets/images/features-first-icon.png" alt="First One">
+                                </div>
+                                <div class="right-content">
+                                    <h4><?php echo $row['name']; ?></h4>
+                                    <p><em>"<?php echo $row['feed_msg']; ?>"</em></p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                <?php } ?>
+
             </div>
 
             <br>
@@ -216,7 +195,7 @@
         </div>
     </section>
     <!-- ***** Testimonials Item End ***** -->
-    
+
 
 	<!--Footer-->
 	<?php include "footer.php" ?>

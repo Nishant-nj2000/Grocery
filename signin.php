@@ -10,7 +10,7 @@
 
 		try
 		{
-		$result = mysqli_query($conn,"SELECT * FROM user_details WHERE email = '$Email' AND password = '$Password'");
+			$result = mysqli_query($conn,"SELECT * FROM user_details WHERE email = '$Email' AND password = '$Password'");
 			$rows = mysqli_fetch_array($result);
 			
 			if(is_array($rows))
