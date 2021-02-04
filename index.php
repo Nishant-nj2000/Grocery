@@ -19,7 +19,7 @@
 	<!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
         <video autoplay muted loop id="bg-video">
-            <source src="assets/images/video.mp4" type="video/mp4" />
+            <source src="header/assets/images/video.mp4" type="video/mp4" />
         </video>
 
         <div class="video-overlay header-text">
@@ -124,7 +124,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading dark-bg">
                         <h2><em>About Us</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
+                        <img src="header/assets/images/line-dec.png" alt="">
                         <p>Hopping for specialty groceries. Here you’ll find a selection of small to medium brands taking the opportunity to present their products on a national stage. We put brands on the map and give customers and independent grocers opportunities to explore, sample or purchase products that have limited distribution. Our selection is innovative, growing, affordable, and ready for you to browse.</p>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Some of Our<em> Testimonials</em></h2>
-                        <img src="assets/images/line-dec.png" alt="waves">
+                        <img src="header/assets/images/line-dec.png" alt="waves">
                     </div>
                 </div>
 
@@ -173,7 +173,7 @@
                         <ul class="features-items">
                             <li class="feature-item">
                                 <div class="left-icon">
-                                    <img src="assets/images/features-first-icon.png" alt="First One">
+                                    <img src="header/assets/images/features-first-icon.png" alt="First One">
                                 </div>
                                 <div class="right-content">
                                     <h4><?php echo $row['name']; ?></h4>

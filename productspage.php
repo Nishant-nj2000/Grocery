@@ -32,9 +32,6 @@
         </div>
     </div>
 
-	<!-- Navigation-->
-	<?php include "navigation.php" ?>
-	<!-- //Navigation -->
 
 
 
