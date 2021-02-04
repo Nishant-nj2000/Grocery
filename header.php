@@ -34,11 +34,11 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.php" class="logo"><img  src="images/logonew.png" width="240" height="70" alt="Theme-Logo" /></a>
+                        <a href="index.php" class="logo"><img  src="images/logonew.png" width="200" height="70" alt="Theme-Logo" /></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.php#about_us">
+                            <li><a href="#about_us">
                                     <span class="fa fa-info-circle" aria-hidden="true"></span> About Us
                                 </a>
                             </li>
@@ -137,22 +137,22 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="header/assets/js/jquery-2.1.0.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="header/assets/js/popper.js"></script>
+    <script src="header/assets/js/bootstrap.min.js"></script>
 
     <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/mixitup.js"></script> 
-    <script src="assets/js/accordions.js"></script>
+    <script src="header/assets/js/scrollreveal.min.js"></script>
+    <script src="header/assets/js/waypoints.min.js"></script>
+    <script src="header/assets/js/jquery.counterup.min.js"></script>
+    <script src="header/assets/js/imgfix.min.js"></script> 
+    <script src="header/assets/js/mixitup.js"></script> 
+    <script src="header/assets/js/accordions.js"></script>
     
     <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+    <script src="header/assets/js/custom.js"></script>
 
   </body>
 </html>

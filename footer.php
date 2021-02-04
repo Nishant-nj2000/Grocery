@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	                <div class="col-lg-6 offset-lg-3">
 	                    <div class="section-heading">
 	                        <h2><em> Features</em></h2>
-	                        <img src="assets/images/line-dec.png" alt="waves">
+	                        <img src="header/assets/images/line-dec.png" alt="waves">
 	                    </div>
 	                </div>
 	                <div class="col-lg-6">
