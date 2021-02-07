@@ -37,6 +37,35 @@
 		}
 		
 	}
+
+	if(isset($_POST['forgotpassword']))
+	{
+	    $msg = '';
+		$emailId = $_POST['forgotpassword_email'];
+	    $result = mysqli_query($conn,"SELECT * FROM user_details WHERE email='".$emailId."'");
+	    $row= mysqli_fetch_array($result);
+	 	$fetch_email = $row['email'];
+	 	$name = $row['name'];
+	 	$password = $row['password'];
+		if($emailId == $fetch_email)
+		{
+			$to = $emailId;
+			$subject = "Password Recovery";
+			$txt = "Hello $name, we heard you need to recover your password. We are providing you your password below     #keepShopping"."\r\n"."Your Password is : $password";
+			$headers = "From: (no-reply)GroceryShoppy@gmail.com"."\r\n";
+			$mail = mail("$to","$subject","$txt","$headers");
+		    $msg = '<div class="alert alert-success" role="alert">
+					<span class="fa fa-handshake-o" aria-hidden="true"></span> We have mailed you your password
+					</div>';
+		}
+		else
+		{
+			$msg = '<div class="alert alert-danger" role="alert">
+					<span class="fa fa-exclamation-circle" aria-hidden="true"></span> Invalid Email id entered
+					</div>';
+		}
+	}
+
 ?>
 
 
@@ -86,12 +115,18 @@
 				<div class="login10-pic">
 					<img src="images/login.jpg" alt="IMG">
 					<?php
-						if(isset($errMsg)){
+						if(isset($errMsg))
+						{
 							echo '<div class="alert alert-danger" role="alert" style="margin-top:20px;">
 								<span class="fa fa-exclamation-circle" aria-hidden="true"></span>
 							'.$errMsg.'</div>';
 						}
-						?>
+						elseif(isset($msg))
+						{
+						   echo'<br><br>';
+						    echo $msg;
+						}
+					?>
 				</div>
 
 				<form class="login100-form validate-form" action="" method="post">
@@ -162,13 +197,12 @@
 								<div class="text-center">
 									<div class="panel-body">
 										<fieldset>
-										<form action="{{ url_for('auth.forgotpassword') }}" method="POST">
+										<form action="" method="POST">
 											<div class="form-group">
-												
-											<input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email" required>
+											<input class="form-control input-lg" placeholder="E-mail Address" name="forgotpassword_email" type="email" required>
 											<br>
 											
-											<input class="login100-form-btn" value="Send Password" type="submit">
+											<input class="login100-form-btn" value="Send Password" name="forgotpassword" type="submit">
 										</form>
 										</div>
 										</fieldset>
