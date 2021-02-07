@@ -53,22 +53,9 @@
                                 if(empty($_SESSION['email']))
                                 {
                                       echo'<li><a href="signin.php">
-                                                <span class="fa fa-phone-square" aria-hidden="true"> Sign In</span>
+                                                <span class="fa fa-sign-in" aria-hidden="true"> Sign In</span>
                                                 </a>
                                             </li>';
-                                }
-
-                                else
-                                {
-                                    if($_SESSION['role'] == 'Customer')
-                                    {
-                                        echo'<li><form action="#" method="post" class="last">
-                                                <input type="hidden" name="cmd" value="_cart">
-                                                <input type="hidden" name="display" value="1">
-                                                <button type="submit" class="btn btn-warning btn-sm" style="border-radius:8px;"> <i class="fa fa-shopping-cart fa-lg" style="font-size: 1.5em;"></i> </button>
-                                                </form>
-                                            </li>';
-                                    }
                                 }
 
 
@@ -96,9 +83,9 @@
                                                     </a>
 
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#"><i class="fa fa-user-circle"></i> My Profile</a>
-                                                    <a class="dropdown-item" href="#"><i class="fa fa-tachometer"></i> Dashboard</a>
-                                                    <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Customer Feedbacks</a>
+                                                    <a class="dropdown-item" href="profile.php"><i class="fa fa-user-circle"></i> My Profile</a>
+                                                    <a class="dropdown-item" href="dashboard.php"><i class="fa fa-tachometer"></i> Dashboard</a>
+                                                    <a class="dropdown-item" href="feedbacks.php"><i class="fa fa-comments"></i> Customer Feedbacks</a>
                                                     <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out"></i> Sign Out</a>
                                                 </div>';
 
@@ -112,9 +99,9 @@
                                                     echo'</a>
 
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#"><i class="fa fa-user-circle"></i> My Profile</a>
-                                                    <a class="dropdown-item" href="#"><i class="fa fa-calendar-check-o"></i> My Orders</a>
-                                                    <a class="dropdown-item" href="#"><i class="fa fa-heart"></i> Wishlist</a>
+                                                    <a class="dropdown-item" href="profile.php"><i class="fa fa-user-circle"></i> My Profile</a>
+                                                    <a class="dropdown-item" href="orders.php"><i class="fa fa-calendar-check-o"></i> My Orders</a>
+                                                    <a class="dropdown-item" href="wishlist.php"><i class="fa fa-heart"></i> Wishlist</a>
                                                     <a class="dropdown-item" href="contact.php"><i class="fa fa-commenting"></i> Give Feedback</a>
                                                     <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out"></i> Sign Out</a>
                                                 </div>';
