@@ -20,13 +20,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/font-awesome.css" rel="stylesheet">
-	<!--pop-up-box-->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<!--//pop-up-box-->
-	<!-- price range -->
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
 	<!-- fonts -->
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+    <link rel="stylesheet" href="header/assets/css/style.css">
 </head>
 <body>
 
@@ -88,16 +84,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<section class="section" id="features">
 	        <div class="container">
+	            <div class="row-md-12">
+                    <div class="section-heading">
+                        <h2><em> Features</em></h2>
+                        <img src="header/assets/images/line-dec.png" alt="waves">
+                    </div>
+	            </div>
+
 	            <div class="row">
-	                <div class="col-lg-6 offset-lg-3">
-	                    <div class="section-heading">
-	                        <h2><em> Features</em></h2>
-	                        <img src="header/assets/images/line-dec.png" alt="waves">
-	                    </div>
-	                </div>
-	                <div class="col-lg-6">
+	                <div class="col-md-6">
 	                    <ul class="features-items">
-	                    <div class="row-md-4">   
 	                        <li class="feature-item">	     
 	                            <div class="right-content">
 	                                <h4>Categories</h4>
@@ -114,10 +110,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	                                <p><em><a href="">Dry Fruits</a></em></p>
 	                            </div>
 	                        </li>
-	                    </div>
+	                    </ul>
+	                </div>
 
-	                    <div class="row-md-4">
-	                         <li class="feature-item">
+	                <div class="col-md-6">
+	                    <ul class="features-items">
+	                    	<li class="feature-item">
 	                            <div class="right-content">
 	                                <h4>Quick Links</h4>
 	                                <p><em><a href="">About Us</a></em></p>
@@ -128,13 +126,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	                                <p><em><a href="">Privacy Policy</a></em></p>
 	                            </div>
 	                        </li>
-	                      </div>
 	                    </ul>
 	                </div>
-	                <div class="col-lg-6">
-	                    <ul class="features-items">
-	                    <div class="row-md-4">
-	                       <li class="feature-item">	                            
+	            </div>	
+	                  
+	            <div class="row">
+                    <div class="col-md-6">
+                       	<ul class="features-items">
+                       	 	 <li class="feature-item">	                            
 	                            <div class="right-content">
 	                                <h4>Get In Touch</h4>
 	                                <p><em><i class="fa fa-map-marker" aria-hidden="true"></i></em>
@@ -145,14 +144,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	                                <em><a href="">groceryshoppy@gmail.com</a></em></p>
 	                            </div>
 	                        </li>
-	                       </div>
+	                    </ul>
+                    </div>
 
-	                       <br>
-	                       <br>
-	                       <br>
-	                       
-	                        <div class="row-md-4">
-	                        <li class="feature-item">	                           
+                    <div class="col-md-6">
+                    	<ul class="features-items">
+                    		<li class="feature-item">	                           
 	                            <div class="right-content">
 	                                <h4>Follow us on</h4>
 	                                <div class="social">
@@ -176,9 +173,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 	                            </div>
 	                        </li>
-	                    </div>
-	                    </ul>
-	                </div>
+                    	</ul>
+                    </div>
 	            </div>
 	        </div>
 	    </section>
@@ -240,15 +236,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</footer>
 
-
-	<!-- copyright -->
-	<div class="copy-right">
-		<div class="container">
-			<p>© 2021 Grocery Shoppy. All rights reserved 
-			</p>
-		</div>
-	</div>
-	<!-- //copyright -->
 
 
 </body>

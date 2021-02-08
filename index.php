@@ -18,10 +18,7 @@
 
 	<!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
-        <video autoplay muted loop id="bg-video">
-            <source src="header/assets/images/video.mp4" type="video/mp4" />
-        </video>
-
+        <img src="images/photo3.jpg" />
         <div class="video-overlay header-text">
             <div class="caption">
                 <h6>No.1 Leading E-commerce marketplace</h6>
@@ -201,9 +198,6 @@
 	<?php include "footer.php" ?>
 	<!--Footer End-->
 
-	<!-- all the scripts-->
-	<?php include "scripts.php" ?>
-	<!-- //all the scripts-->
 
 </body>
 
